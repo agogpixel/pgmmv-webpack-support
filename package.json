@@ -1,0 +1,50 @@
+{
+  "name": "@agogpixel/pgmmv-webpack-support",
+  "description": "Webpack support for Pixel Game Maker MV scripting.",
+  "license": "UNLICENSED",
+  "author": "kidthales <kidthales@agogpixel.com>",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/agogpixel/pgmmv-webpack-support"
+  },
+  "main": "./src/index.js",
+  "scripts": {
+    "postinstall": "husky install",
+    "start": "jest --watch",
+    "test": "jest --coverage",
+    "prebuild": "cavy clean dist",
+    "build": "shx mkdir -p dist && shx cp -r src dist && shx rm dist/src/*.spec.js",
+    "postbuild": "cavy copy dist && shx cp LICENSE README.md dist",
+    "smoke-test": "cd test/smoke && npm install && npm test",
+    "create-tarball": "cavy pack dist",
+    "publish-tarball": "cavy publish dist",
+    "lint": "cavy lint --all",
+    "lint-fix": "cavy lint --all --fix",
+    "clean": "cavy clean --all"
+  },
+  "peerDependencies": {
+    "webpack": ">=5.47.0"
+  },
+  "devDependencies": {
+    "@agogpixel/cavy": "~0.1.1",
+    "eslint": "~8.10.0",
+    "eslint-config-prettier": "~8.4.0",
+    "eslint-plugin-jest": "~26.1.1",
+    "eslint-plugin-prettier": "~4.0.0",
+    "husky": "~7.0.4",
+    "jest": "^27.5.1",
+    "lint-staged": "~12.3.4",
+    "prettier": "~2.5.1",
+    "shx": "~0.3.4",
+    "webpack": "~5.69.1"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.(json|md|yml)": "prettier --write"
+  }
+}

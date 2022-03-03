@@ -1,0 +1,18 @@
+{
+  "name": "@agogpixel/pgmmv-webpack-support-smoke-test",
+  "description": "PGMMV webpack support smoke test.",
+  "license": "UNLICENSED",
+  "author": "kidthales <kidthales@agogpixel.com>",
+  "version": "0.0.0",
+  "scripts": {
+    "prepare": "npm link ../../dist",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "~27.5.1"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
