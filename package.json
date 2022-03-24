@@ -1,9 +1,9 @@
 {
   "name": "@agogpixel/pgmmv-webpack-support",
   "description": "Webpack support for Pixel Game Maker MV scripting.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "author": "kidthales <kidthales@agogpixel.com>",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/agogpixel/pgmmv-webpack-support"
